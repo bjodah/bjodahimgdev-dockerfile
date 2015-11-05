@@ -2,7 +2,7 @@
 FROM bjodah/bjodahimg:latest
 MAINTAINER Björn Dahlgren <bjodah@DELETEMEgmail.com>
 RUN apt-get update && \
-    apt-get --quiet --assume-yes install \
+    apt-get --quiet --assume-yes -f install \
     phantomjs imagemagick && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
