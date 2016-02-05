@@ -4,4 +4,5 @@ MAINTAINER Björn Dahlgren <bjodah@DELETEMEgmail.com>
 ENV PATH /opt/miniconda2/bin:$PATH
 RUN conda install conda-build gmp numpy cython cmake patchelf && \
     conda config --set always_yes yes && \
-    conda config --set changeps1 no
+    conda config --set changeps1 no && \
+    conda clean -t
